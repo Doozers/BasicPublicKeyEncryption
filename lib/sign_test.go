@@ -2,8 +2,9 @@ package lib
 
 import (
 	"crypto/rand"
-	"golang.org/x/crypto/nacl/sign"
 	"testing"
+
+	"golang.org/x/crypto/nacl/sign"
 )
 
 func TestSign(t *testing.T) {
