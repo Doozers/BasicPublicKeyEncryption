@@ -22,6 +22,7 @@ func main() {
 	}
 
 	crypt := lib.Sign((*[64]byte)(privKey), []byte("Hello World"))
-	fmt.Println(crypt)
-	fmt.Println(lib.Verify((*[32]byte)(pubKey), crypt))
+	msg, b := lib.Verify((*[32]byte)(pubKey), crypt)
+
+	fmt.Println(string(msg), b)
 }
